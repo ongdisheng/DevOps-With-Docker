@@ -1,0 +1,4 @@
+$ docker run --rm -it --name missing-dependencies ubuntu
+root@058c474fd8a5:/# apt-get update
+root@058c474fd8a5:/# apt-get -y install curl
+root@058c474fd8a5:/# sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
